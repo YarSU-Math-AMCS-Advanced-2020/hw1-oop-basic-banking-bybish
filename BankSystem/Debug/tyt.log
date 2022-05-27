@@ -1,0 +1,10 @@
+﻿  Account.cpp
+A:\GIT\bank\tyt\tyt\Account.cpp(73,31): warning C4018: <=: несоответствие типов со знаком и без знака
+A:\GIT\bank\tyt\tyt\Account.cpp(79,20): warning C4018: <: несоответствие типов со знаком и без знака
+  Card.cpp
+  CashTransaction.cpp
+  DebitAccount.cpp
+  Main.cpp
+  Transaction.cpp
+  Создание кода...
+  tyt.vcxproj -> A:\GIT\bank\tyt\Debug\tyt.exe
