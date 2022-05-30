@@ -13,6 +13,8 @@ public:
 
 	Account() {};
 	
+	DebitAccount* get_debit_account(int number) { return all_debit_account[number]; };
+
 	void set_login(string _login);
 	void set_password(string _password);
 	string get_login() { return login; };
@@ -30,6 +32,13 @@ public:
 	void open_card(Date _date, int _number, Card::CardType _type, Card::PaymentSystem _paymen_system);
 	void rebinding_card( int _number_card, int _number_deb);
 	void delete_card(int _number_card);
+
+	void print_deb_account();
+	void print_deb_account(int number);
+
+	void print_card();
+	void print_card(int number);
+
 private:
 	string login;
 	string password;

@@ -1,13 +1,22 @@
 #include "DebitAccount.h"
 
-void DebitAccount::get_currency()
+string DebitAccount::get_currency_rep()
 {
 	if (currency == Currency::RUB)
-		cout << "RUB";
-	if (currency == Currency::USD)
-		cout << "USD";
+		return "RUB";
 	else
-		cout << "EURO";
+	{
+		if (currency == Currency::USD)
+			return "USD";
+		else
+			return "EUR";
+	}
+	
+}
+
+DebitAccount::Currency DebitAccount::get_currency()
+{
+	return currency;
 }
 
 DebitAccount::DebitAccount(double _balance, double _limit, Currency _currency)
@@ -20,6 +29,14 @@ DebitAccount::DebitAccount(double _balance, double _limit, Currency _currency)
 void DebitAccount::limit_setting(double _limit)
 {
 	limit = _limit;
+}
+
+void DebitAccount::print_info()
+{
+	cout << "" << get_balance() << endl;
+	cout << "" << get_limit() << endl;
+	cout << "" << get_currency_rep() << endl;
+	cout << endl << endl;
 }
 
 Date::Date(int _month, int _day, int _year)

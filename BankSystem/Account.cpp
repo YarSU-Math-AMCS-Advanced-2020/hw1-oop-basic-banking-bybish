@@ -60,7 +60,7 @@ void Account::open_debit_account()
 		all_debit_account.push_back(new DebitAccount(0, 100000, DebitAccount::Currency::EURO));
 	if (temp == 3)
 		all_debit_account.push_back(new DebitAccount(0, 100000, DebitAccount::Currency::RUB));
-	
+	cout << endl << endl;
 }
 
 void Account::open_debit_account(DebitAccount::Currency _currency)
@@ -104,5 +104,30 @@ void Account::delete_card(int _number_card)
 	all_card.erase(all_card.begin() + _number_card);
 }
 
+void Account::print_deb_account()
+{
+	for (int i = 0; i < all_debit_account.size(); i++)
+		all_debit_account[i]->print_info();
+}
 
+void Account::print_deb_account(int number_deb)
+{
+	if (all_debit_account.size() <= number_deb || number_deb < 0)
+	{
+		cout << "Ошибка, такого счёта нет";
+		return;
+	}
 
+	all_debit_account[number_deb]->print_info();
+}
+
+void Account::print_card()
+{
+	for (int i = 0; i < all_card.size(); i++)
+		all_card[i]->print_info();
+}
+
+void Account::print_card(int number)
+{
+	all_card[number]->print_info();
+}

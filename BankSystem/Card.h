@@ -14,6 +14,8 @@ public:
 	void set_debit_account(DebitAccount* _debit_account);
 	void limit_setting(double _limit); 
 
+	void print_info();
+
 private:
 	Date expiration_time;
 	DebitAccount* debit_account;

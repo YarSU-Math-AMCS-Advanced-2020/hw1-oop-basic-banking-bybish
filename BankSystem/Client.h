@@ -6,11 +6,6 @@ using namespace std;
 
 class Client
 {
-protected:
-	string name;
-	string phone_number;
-	string address;
-
 public:
 	string get_name() { return name; }
 	string get_phone_number() { return phone_number; }
@@ -19,6 +14,11 @@ public:
 	void set_name(string _name);
 	void set_phone_number(string _phone_number);
 	void set_address(string _address);
+
+protected:
+	string name;
+	string phone_number;
+	string address;
 };
 
 class Individual : public Client

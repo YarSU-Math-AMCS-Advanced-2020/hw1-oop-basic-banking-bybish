@@ -16,14 +16,16 @@ void CashTransaction::get_cash_type()
 		cout << "Adding";
 }
 
-CashTransaction::CashTransaction(DebitAccount* _debit_account, double _amount, time_t _cash_transaction_time, Date _cash_transaction_date, Type _cash_transaction_type)
+
+
+CashTransaction::CashTransaction(DebitAccount* _debit_account, double _amount, Date _date, Type _type)
 {
 	debit_account = _debit_account;
 	amount = _amount;
-	cash_transaction_time = _cash_transaction_time;
-	cash_transaction_date = _cash_transaction_date;
-	cash_transaction_type = _cash_transaction_type;
+	cash_transaction_date = _date;
+	cash_transaction_type = _type;
 }
+
 
 void CashTransaction::start()
 {
